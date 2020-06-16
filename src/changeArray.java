@@ -17,20 +17,20 @@ public class changeArray {
      */
 
 
-     /*
-        String bir array verildiğinde
+    /*
+       String bir array verildiğinde
 
-        Eger String Orange içeriyorsa bütün  Orange leri Apple  çevir
+       Eger String Orange içeriyorsa bütün  Orange leri Apple  çevir
 
-        Örnek:
+       Örnek:
 
-        Array : Peach , Berry , Orange , WaterMelon , Orange
+       Array : Peach , Berry , Orange , WaterMelon , Orange
 
-        Result böyle olmalı --> : Peach , Berry , Apple , WaterMelon , Apple
+       Result böyle olmalı --> : Peach , Berry , Apple , WaterMelon , Apple
 
-        Arrayi print edin
+       Arrayi print edin
 
-      */
+     */
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
@@ -41,7 +41,35 @@ public class changeArray {
 //        kullanman gereken -> UseThisArray
 
 
+            for (String element : UseThisArray) {
+
+
+                for (int i = 0; i <UseThisArray.length ; i++) {
+
+                    if (UseThisArray[i].equals("Orange")) {
+
+                        UseThisArray[i] = "Apple";
+
+                    }
+                }
+
+                System.out.println(element);
+
+
+            }
+
+
+//
+//        String[] thisIsAStringArray = {"Apple", "Banana", "Orange"};
+//        String stringToSearch = "Banana";
+//        boolean found = false;
+//        for (String element : UseThisArray) {
+//            if (element.equals("Orange")) {
+//                element="Apple";
+//                found = true;
+//            }
+//        }
+
 
     }
-
 }
