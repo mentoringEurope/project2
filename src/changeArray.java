@@ -41,35 +41,16 @@ public class changeArray {
 //        kullanman gereken -> UseThisArray
 
 
-            for (String element : UseThisArray) {
+        for(int i = 0 ; i<UseThisArray.length ; i++){
 
-
-                for (int i = 0; i <UseThisArray.length ; i++) {
-
-                    if (UseThisArray[i].equals("Orange")) {
-
-                        UseThisArray[i] = "Apple";
-
-                    }
-                }
-
-                System.out.println(element);
-
+            if(UseThisArray[i].equals("Orange")){
+                UseThisArray[i] = "Apple";
 
             }
 
+        }
 
-//
-//        String[] thisIsAStringArray = {"Apple", "Banana", "Orange"};
-//        String stringToSearch = "Banana";
-//        boolean found = false;
-//        for (String element : UseThisArray) {
-//            if (element.equals("Orange")) {
-//                element="Apple";
-//                found = true;
-//            }
-//        }
-
+        System.out.println(Arrays.toString(UseThisArray));
 
     }
 }

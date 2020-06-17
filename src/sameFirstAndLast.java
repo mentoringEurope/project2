@@ -40,6 +40,12 @@ public class sameFirstAndLast {
 
       // Koda burdan başlayin
 
+        if(useThisArray[0].equals(useThisArray[useThisArray.length-1])){
+            System.out.println("true");
+        }else{
+            System.out.println("false");
+        }
+
 
     }
 

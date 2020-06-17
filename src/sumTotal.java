@@ -29,34 +29,48 @@ public class sumTotal {
     public static void main(String[] args) {
 
 //        Koda burdan başlayın
-        String[][] s1 = new String [][]{{"$12" , "$22" , "$5"},{"€9" , "€40" , "$1" , "$2"}, {"€12"}};
-        double [][]d1= null;
-        double sum=0.0;
-        for( int i = 0 ; i < s1.length ; i++){
-            for(int j =0 ; j< s1[i].length ; j++){
 
-                if(s1[i][j].contains("$")){
-                    s1[i][j]=s1[i][j].replace("$","");
+        String[][] nums = {
 
-                    d1 [i][j] = Double.parseDouble(s1[i][j]);
+                {"$12", "$22", "5"},
+                {"€9", "€40", "$1", "$2"},
+                {"€12"}
+        };
 
-                    d1 [i][j]=d1 [i][j]*3.2;
+        int total = 0;
 
+        for (int i = 0; i < nums.length; i++) {
 
+            for (int j = 0; j < nums[i].length; j++) {
+
+                if (nums[i][j].contains("$")) {
+
+                    String strNum = nums[i][j];
+
+                    strNum = strNum.replace("$", "");
+
+                    int intNum = Integer.parseInt(strNum);
+
+                    double doubleNum = intNum * 3.2;
+
+                    total += doubleNum;
+
+                } else if (nums[i][j].contains("€")) {
+                    String strNum = nums[i][j];
+
+                    strNum = strNum.replace("€", "");
+
+                    int intNum = Integer.parseInt(strNum);
+
+                    double doubleNum = intNum * 4.2;
+
+                    total += doubleNum;
 
                 }
-                if(s1[i][j].contains("€")){
-                    s1[i][j]=s1[i][j].replace("$","");
 
-                    d1 [i][j] = Double.parseDouble(s1[i][j]);
-                    d1 [i][j]=d1 [i][j]*4.2;
-                }
-
-                sum=+d1 [i][j];
             }
-
         }
-        System.out.println(sum);
+        System.out.println(total);
     }
 }
 
